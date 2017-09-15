@@ -1,0 +1,18 @@
+#%RAML 1.0
+title: Test API
+version: 1.0
+baseUri: http://localhost:8081/ta
+
+/testAPI:
+  get:
+    queryParameters:
+      causeError:
+        type: boolean
+        required: false
+        default: false
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {"result": "success"}
